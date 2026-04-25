@@ -21,8 +21,8 @@ def RegistraSet(ganador):
     if ganadorEquipo.setsGanados == 3:
         ganadorEquipo.partidosGanados = ganadorEquipo.partidosGanados + 1
         perdedorEquipo.partidosPerdidos = perdedorEquipo.partidosPerdidos + 1
-        ganadorEquipo.setsGanados = 0   # <-- usa la variable, no equipo1/equipo2
-        perdedorEquipo.setsGanados = 0  # <-- idem
+        ganadorEquipo.setsGanados = 0   
+        perdedorEquipo.setsGanados = 0  
         print("  >> " + ganadorEquipo.nombre + " gano el partido!")
         return True
     return False
@@ -38,7 +38,7 @@ def JugarPartido():
     equipo2.setsGanados = 0
     numSet = 1
     terminoPartido = False
-    while not terminoPartido:  # <-- mas pythónico que == False
+    while not terminoPartido:  
         p1 = Puntos()
         p2 = Puntos()
         while (p1 < 25 and p2 < 25) or p1 == p2:
